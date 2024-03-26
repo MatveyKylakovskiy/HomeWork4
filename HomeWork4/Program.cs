@@ -24,7 +24,7 @@ switch (counter)
 
     default:
         {
-            Console.WriteLine($"The number {number} is included in the array");
+            Console.WriteLine($"The number {number} is included in the array {counter} times");
             break;
         }
 }

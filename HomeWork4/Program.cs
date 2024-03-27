@@ -11,6 +11,7 @@ for (int i = 0; i < array.Length; i++)
     if (number == array[i])
     {
         counter++;
+       
     }
 }
 
@@ -30,7 +31,7 @@ switch (counter)
 }*/
 
 //Second task
-int[] array = { 1, 3, 2, 3, 4, 5, 4, 3};
+/*int[] array = { 1, 3, 2, 3, 4, 5, 4, 3};
 
 Console.WriteLine("Enter a number to check");
 
@@ -43,6 +44,7 @@ for (int i = 0; i < array.Length; i++)
     if (number == array[i])
     {
         counter1++;
+        
     }
     
 }
@@ -70,8 +72,47 @@ switch (counter1) {
             }
 
             Console.WriteLine(string.Join(",", array));
+
             Console.WriteLine(string.Join(",", arrayNew));
         }
         break;
 
+}*/
+
+//Third task
+Console.WriteLine("Inter size of array");
+
+int size = int.Parse(Console.ReadLine());
+int[] array = new int[size];
+Random rnd = new Random();
+
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = rnd.Next(1,10);
 }
+
+int max = array[0];
+int min = array[0];
+double avrg = array[0];
+
+foreach (int item in array)
+{
+
+    if (item > max)
+    {
+        max = item;
+    }
+
+    else if (item < min)
+    {
+        min = item;
+    }
+
+    avrg += item;
+}
+
+double average = avrg / size;
+
+Console.WriteLine($"Max: {max}, Min: {min}, Average: {average}");
+Console.WriteLine();
+Console.WriteLine(string.Join(", ", array));

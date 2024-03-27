@@ -80,7 +80,7 @@ switch (counter1) {
 }*/
 
 //Third task
-Console.WriteLine("Inter size of array");
+/*Console.WriteLine("Inter size of array");
 
 int size = int.Parse(Console.ReadLine());
 int[] array = new int[size];
@@ -113,6 +113,47 @@ foreach (int item in array)
 
 double average = avrg / size;
 
-Console.WriteLine($"Max: {max}, Min: {min}, Average: {average}");
+Console.WriteLine($"Max: {max}, Min: {min}, Average number: {average}");
 Console.WriteLine();
-Console.WriteLine(string.Join(", ", array));
+Console.WriteLine(string.Join(", ", array));*/
+
+//Fourth task
+int[] array1 = { 1, 2, 3, 4, 5 };
+int[] array2 = { 6, 7, 8, 9, 10 };
+
+Console.Write("First array  ");
+Console.WriteLine(string.Join(" , ", array1));
+
+Console.Write("Second array ");
+Console.WriteLine(string.Join(" , ", array2));
+
+double average1 = 0;
+
+foreach (int item in array1)
+{
+
+    average1 += item;
+}
+
+double average2 = 0;
+
+foreach (int item in array2)
+{
+
+    average2 += item;
+}
+
+if (average1 > average2)
+{
+    Console.WriteLine($"The average number of firs array is higher");
+}
+
+else if (average1 < average2)
+{
+    Console.WriteLine($"The averege number of second array is higher");
+}
+
+else if (average1 == average2)
+{
+    Console.WriteLine("Average numbers is equals");
+}

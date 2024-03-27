@@ -118,7 +118,7 @@ Console.WriteLine();
 Console.WriteLine(string.Join(", ", array));*/
 
 //Fourth task
-int[] array1 = { 1, 2, 3, 4, 5 };
+/*int[] array1 = { 1, 2, 3, 4, 5 };
 int[] array2 = { 6, 7, 8, 9, 10 };
 
 Console.Write("First array  ");
@@ -156,4 +156,79 @@ else if (average1 < average2)
 else if (average1 == average2)
 {
     Console.WriteLine("Average numbers is equals");
+}*/
+
+
+//Additional tasks
+//Fourth task 
+
+bool check = true;
+Console.WriteLine("Enter size of array. When size > 5 and size <= 10");
+
+while (check)
+{
+
+    int size = int.Parse(Console.ReadLine());
+
+    if (size > 5 & size <= 10)
+    {
+        int[] array1 = new int[size];
+        Random rnd = new Random();
+        int counter1 = 0;
+
+        for (int i = 0; i < array1.Length; i++)
+        {
+            array1[i] = rnd.Next(1, 10);
+            if (array1[i] % 2 == 0)
+            {
+                counter1++;
+            }
+        }
+
+        Console.WriteLine();
+        Console.Write("Initial array ");
+        Console.WriteLine(string.Join(",", array1));
+        Console.WriteLine();
+
+        switch (counter1)
+        {
+            case 0:
+                {
+                    Console.WriteLine($"There are no even numbers in the array");
+                    break;
+                }
+
+            default:
+                {
+                    int[] array2 = new int[counter1];
+                    int counter2 = 0;
+
+                    foreach (int item in array1)
+                    {
+
+                        if (item % 2 == 0)
+                        {
+                            array2[counter2] = item;
+                            counter2++;
+                        }
+                    }
+
+                    
+                    Console.WriteLine("An array of even numbers");
+                    Console.WriteLine(string.Join(",", array2));
+                }
+                break;
+        }
+
+                check = false;
+
+    }
+    else
+    {
+        Console.WriteLine("Try again");
+    }
+
+
 }
+
+

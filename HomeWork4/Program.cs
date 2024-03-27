@@ -162,7 +162,7 @@ else if (average1 == average2)
 //Additional tasks
 //Fourth task 
 
-bool check = true;
+/*bool check = true;
 Console.WriteLine("Enter size of array. When size > 5 and size <= 10");
 
 while (check)
@@ -229,6 +229,45 @@ while (check)
     }
 
 
+}*/
+
+//Additional tasks
+//Fifth task
+
+Console.WriteLine("Enter size of array");
+
+int size = int.Parse(Console.ReadLine());
+int[] array1 = new int[size];
+Random rnd = new Random();
+
+
+for (int i = 0; i < array1.Length; i++)
+{
+    array1[i] = rnd.Next(1, 10);
 }
+
+int[] array2 = new int[size];
+
+for (int i = 0; i < array1.Length; i++)
+{
+    if(i % 2 == 0)
+    {
+        array2[i] = array1[i];
+    }
+    else if (i % 2 != 0)
+    {
+        array2[i] = 0;
+    }
+}
+
+Console.Write("Initial array       ");
+Console.WriteLine(string.Join(" , ", array1));
+Console.Write("Array after changed ");
+Console.WriteLine(string.Join(" , ", array2));
+
+
+
+
+
 
 

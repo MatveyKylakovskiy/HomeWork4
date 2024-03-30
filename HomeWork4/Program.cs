@@ -296,6 +296,36 @@ Console.WriteLine(string.Join(" , ", array));*/
 //Bubble sorting is implemented in task 6
 
 
+//Additional tasks
+//Eighth task
 
 
+int[,] array1 = new int[3, 4] { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
+int[,] array2 = new int[4, 3] { { 1, 2, 3 }, { 1, 1, 1 }, { 0, 0, 0 }, { 2, 1, 0 } };
 
+var row = array1.GetLength(0);
+var collum = array2.GetLength(1);
+
+int[,] array3 = new int[row, collum];
+
+for (var i = 0; i < row; i++)
+{
+    for (var j = 0; j < collum; j++)
+    {
+
+        for (int k = 0; k < collum; k++)
+        {
+            array3[i, j] += array1[i, k] * array2[k, j];
+        }
+    }
+}
+
+
+for (int i = 0; i < row; i++)
+{
+    for (int j = 0; j < collum; j++)
+    {
+        Console.Write("{0} ", array3[i, j]);
+    }
+    Console.WriteLine();
+}

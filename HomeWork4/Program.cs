@@ -267,7 +267,7 @@ Console.WriteLine(string.Join(" , ", array2));*/
 
 //Additional tasks
 //Sixth task
-
+/*
 string[] array = { "Matvey", "Anton", "Vladimir", "Vitaly", "Arnold", "motvey" };
 
 string temp = "";
@@ -288,7 +288,13 @@ for (int i = 0; i < array.Length - 1; i++)
     }
 }
 
-Console.WriteLine(string.Join(" , ", array));
+Console.WriteLine(string.Join(" , ", array));*/
+
+
+//Additional tasks
+//Seventh task
+//Bubble sorting is implemented in task 6
+
 
 
 

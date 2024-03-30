@@ -332,7 +332,7 @@ for (var i = 0; i < row; i++)
 
 //Ninth task
 
-int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
+/*int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
 var summ = 0;
 
 for (var i = 0; i < array.GetLength(0); i++)
@@ -343,4 +343,43 @@ for (var i = 0; i < array.GetLength(0); i++)
     }
 }
 
-Console.WriteLine(summ);
+Console.WriteLine(summ);*/
+
+//Tenth task
+
+int[,] array = new int[4, 4] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 4, 0, 2, 9 }, {1, 3, 2, 7} };
+
+
+for (var i = 0; i < array.GetLength(0); i++)
+{
+    for (var j = 0; j< array.GetLength(1); j++)
+    {
+        Console.Write(array[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine();
+Console.Write("The main diagonal: ");
+    
+for (var i = 0; i < array.GetLength(0); i++)
+{
+    for (var j = 0; j < array.GetLength(1); j++)
+    {
+        if ( i == j)
+        {
+            Console.Write( array[i, j] + " ");
+        }
+    }
+    
+}
+
+Console.WriteLine();
+Console.Write("The side diagonal: ");
+
+var size = array.GetLength(0) - 1;
+
+for (int i = size; i >= 0; i--)
+{
+    Console.Write(array[i, size - i] + " ");
+}

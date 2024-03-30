@@ -1,5 +1,5 @@
 ﻿//First task
-/*int[] array = { 1, 2, 3, 2, 5, 6, 7, 8, 9 };
+int[] array = { 1, 2, 3, 2, 5, 6, 7, 8, 9 };
 
 Console.WriteLine("Enter a number to check");
 
@@ -25,7 +25,7 @@ if (check)
 else
 {
     Console.WriteLine($"The number {number} is not included in array");
-}*/
+}
 
 
 
@@ -267,7 +267,7 @@ Console.WriteLine(string.Join(" , ", array2));*/
 
 //Additional tasks
 //Sixth task
-/*
+
 string[] array = { "Matvey", "Anton", "Vladimir", "Vitaly", "Arnold", "motvey" };
 
 string temp = "";
@@ -288,7 +288,7 @@ for (int i = 0; i < array.Length - 1; i++)
     }
 }
 
-Console.WriteLine(string.Join(" , ", array));*/
+Console.WriteLine(string.Join(" , ", array));
 
 
 //Additional tasks
@@ -300,7 +300,7 @@ Console.WriteLine(string.Join(" , ", array));*/
 //Eighth task
 
 
-/*int[,] array1 = new int[3, 4] { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
+int[,] array1 = new int[3, 4] { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 0 } };
 int[,] array2 = new int[4, 3] { { 1, 2, 3 }, { 1, 1, 1 }, { 0, 0, 0 }, { 2, 1, 0 } };
 
 var row = array1.GetLength(0);
@@ -328,11 +328,11 @@ for (var i = 0; i < row; i++)
         Console.Write("{0} ", array3[i, j]);
     }
     Console.WriteLine();
-}*/
+}
 
 //Ninth task
 
-/*int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
+int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
 var summ = 0;
 
 for (var i = 0; i < array.GetLength(0); i++)
@@ -343,16 +343,16 @@ for (var i = 0; i < array.GetLength(0); i++)
     }
 }
 
-Console.WriteLine(summ);*/
+Console.WriteLine(summ);
 
 //Tenth task
-/*
-int[,] array = new int[4, 4] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 4, 0, 2, 9 }, {1, 3, 2, 7} };
+
+int[,] array = new int[4, 4] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 4, 0, 2, 9 }, { 1, 3, 2, 7 } };
 
 
 for (var i = 0; i < array.GetLength(0); i++)
 {
-    for (var j = 0; j< array.GetLength(1); j++)
+    for (var j = 0; j < array.GetLength(1); j++)
     {
         Console.Write(array[i, j] + " ");
     }
@@ -361,17 +361,17 @@ for (var i = 0; i < array.GetLength(0); i++)
 
 Console.WriteLine();
 Console.Write("The main diagonal: ");
-    
+
 for (var i = 0; i < array.GetLength(0); i++)
 {
     for (var j = 0; j < array.GetLength(1); j++)
     {
-        if ( i == j)
+        if (i == j)
         {
-            Console.Write( array[i, j] + " ");
+            Console.Write(array[i, j] + " ");
         }
     }
-    
+
 }
 
 Console.WriteLine();
@@ -382,7 +382,7 @@ var size = array.GetLength(0) - 1;
 for (int i = size; i >= 0; i--)
 {
     Console.Write(array[i, size - i] + " ");
-}*/
+}
 
 //Eleventh task
 //

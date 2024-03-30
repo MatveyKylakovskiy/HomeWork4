@@ -346,7 +346,7 @@ for (var i = 0; i < array.GetLength(0); i++)
 Console.WriteLine(summ);*/
 
 //Tenth task
-
+/*
 int[,] array = new int[4, 4] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 4, 0, 2, 9 }, {1, 3, 2, 7} };
 
 
@@ -382,4 +382,137 @@ var size = array.GetLength(0) - 1;
 for (int i = size; i >= 0; i--)
 {
     Console.Write(array[i, size - i] + " ");
+}*/
+
+//Eleventh task
+
+int[,] array = new int[4, 4] { { 2, 8, 1, 5 }, { 5, 1, 7, 2 }, { 5, 5, 2, 2 }, { 0, 1, 2, 0 } };
+
+
+for (var i = 0; i < array.GetLength(0); i++)
+{
+    for (var j = 0; j < array.GetLength(1); j++)
+    {
+        Console.Write(array[i, j] + " ");
+    }
+    Console.WriteLine();
 }
+
+
+int[] row1 = new int[array.GetLength(0)];
+int[] row2 = new int[array.GetLength(0)];
+int[] row3 = new int[array.GetLength(0)];
+int[] row4 = new int[array.GetLength(0)];
+
+
+for (var i = 0; i < array.GetLength(0); i++)
+{
+        row1[i] = array[0, i];
+    
+        row2[i] = array[1, i];
+    
+        row3[i] = array[2, i];
+    
+        row4[i] = array[3, i];
+    
+}
+
+Console.Write("First row  ");
+Console.Write(string.Join(" ", row1));
+Console.WriteLine();
+
+Console.Write("Second row ");
+Console.Write(string.Join(" ", row2));
+Console.WriteLine();
+
+Console.Write("Third row  ");
+Console.Write(string.Join(" ", row3));
+Console.WriteLine();
+
+Console.Write("Fourth row ");
+Console.Write(string.Join(" ", row4));
+Console.WriteLine();
+
+var tmp1 = 0;
+for (var m = 0; m < row1.Length; m++)
+{
+    for (var n = 0; n < row1.Length - 1; n++)
+    {
+        if (row1[n] > row1[n + 1] )
+        {
+            tmp1 = row1[n];
+            row1[n] = row1[n + 1];
+            row1[n + 1] = tmp1;
+        }
+    }
+}
+
+Console.Write("First row after sotring  ");
+Console.Write(string.Join(" ", row1));
+Console.WriteLine();
+
+var tmp2 = 0;
+for (var m = 0; m < row2.Length; m++)
+{
+    for (var n = 0; n < row2.Length - 1; n++)
+    {
+        if (row2[n] > row2[n + 1])
+        {
+            tmp2 = row2[n];
+            row2[n] = row2[n + 1];
+            row2[n + 1] = tmp2;
+        }
+    }
+}
+
+Console.Write("Second row after sotring ");
+Console.Write(string.Join(" ", row2));
+Console.WriteLine();
+
+var tmp3 = 0;
+for (var m = 0; m < row3.Length; m++)
+{
+    for (var n = 0; n < row3.Length - 1; n++)
+    {
+        if (row3[n] > row3[n + 1])
+        {
+            tmp3 = row3[n];
+            row3[n] = row3[n + 1];
+            row3[n + 1] = tmp3;
+        }
+    }
+}
+
+Console.Write("Third row after sotring  ");
+Console.Write(string.Join(" ", row3));
+Console.WriteLine();
+
+var tmp4 = 0;
+for (var m = 0; m < row4.Length; m++)
+{
+    for (var n = 0; n < row4.Length - 1; n++)
+    {
+        if (row4[n] > row4[n + 1])
+        {
+            tmp4 = row4[n];
+            row4[n] = row4[n + 1];
+            row4[n + 1] = tmp4;
+        }
+    }
+}
+
+Console.Write("Fourth row after sotring ");
+Console.Write(string.Join(" ", row4));
+Console.WriteLine();
+
+
+
+
+
+
+
+
+
+
+
+

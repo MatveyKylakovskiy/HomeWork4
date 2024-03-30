@@ -1,5 +1,5 @@
 ﻿//First task
-int[] array = { 1, 2, 3, 2, 5, 6, 7, 8, 9 };
+/*int[] array = { 1, 2, 3, 2, 5, 6, 7, 8, 9 };
 
 Console.WriteLine("Enter a number to check");
 
@@ -25,7 +25,7 @@ if (check)
 else
 {
     Console.WriteLine($"The number {number} is not included in array");
-}
+}*/
 
 
 
@@ -268,7 +268,27 @@ Console.WriteLine(string.Join(" , ", array2));*/
 //Additional tasks
 //Sixth task
 
+string[] array = { "Matvey", "Anton", "Vladimir", "Vitaly", "Arnold", "motvey" };
 
+string temp = "";
+
+for (int i = 0; i < array.Length - 1; i++)
+{
+    for (int j = i + 1; j < array.Length; j++)
+
+    {
+        int result = string.Compare(array[i], array[j], StringComparison.CurrentCultureIgnoreCase);
+
+        if (result > 0)
+        {
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+}
+
+Console.WriteLine(string.Join(" , ", array));
 
 
 

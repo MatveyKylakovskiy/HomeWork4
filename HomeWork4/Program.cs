@@ -1,34 +1,33 @@
 ﻿//First task
-/*int[] array = { 1, 2, 3, 2, 5, 6, 7, 8, 9 };
+int[] array = { 1, 2, 3, 2, 5, 6, 7, 8, 9 };
 
 Console.WriteLine("Enter a number to check");
 
 int number = int.Parse(Console.ReadLine());
-int counter = 0;
+bool check = false;
 
 for (int i = 0; i < array.Length; i++)
 {
     if (number == array[i])
     {
-        counter++;
-       
+        check = true;
+        break;
+
     }
+
 }
 
-switch (counter)
+if (check)
 {
-    case 0:
-        {
-            Console.WriteLine($"The number {number} is not included in the array");
-            break;
-        }
+    Console.WriteLine($"The number {number} is included in array");
 
-    default:
-        {
-            Console.WriteLine($"The number {number} is included in the array {counter} times");
-            break;
-        }
-}*/
+}
+else
+{
+    Console.WriteLine($"The number {number} is not included in array");
+}
+
+
 
 //Second task
 /*int[] array = { 1, 3, 2, 3, 4, 5, 4, 3};
@@ -234,7 +233,7 @@ while (check)
 //Additional tasks
 //Fifth task
 
-Console.WriteLine("Enter size of array");
+/*Console.WriteLine("Enter size of array");
 
 int size = int.Parse(Console.ReadLine());
 int[] array1 = new int[size];
@@ -263,8 +262,11 @@ for (int i = 0; i < array1.Length; i++)
 Console.Write("Initial array       ");
 Console.WriteLine(string.Join(" , ", array1));
 Console.Write("Array after changed ");
-Console.WriteLine(string.Join(" , ", array2));
+Console.WriteLine(string.Join(" , ", array2));*/
 
+
+//Additional tasks
+//Sixth task
 
 
 
